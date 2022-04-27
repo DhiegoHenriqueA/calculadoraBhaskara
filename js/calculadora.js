@@ -4,8 +4,12 @@ const calculaDelta = (a, b, c) => {
 
 const calculaBhaskara = (a, b, delta) => {
   let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+  let x2 = null;
 
-  let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+  if (delta > 0) {
+    x2 = (-b - Math.sqrt(delta)) / (2 * a);
+  }
+
   return { x1: x1, x2: x2 };
 };
 
